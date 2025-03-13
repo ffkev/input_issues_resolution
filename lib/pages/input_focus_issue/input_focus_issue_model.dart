@@ -9,6 +9,10 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
 class InputFocusIssueModel extends FlutterFlowModel<InputFocusIssueWidget> {
+  ///  Local state fields for this page.
+
+  int trigger = 0;
+
   ///  State fields for stateful widgets in this page.
 
   // State field(s) for TextField widget.

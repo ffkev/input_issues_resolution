@@ -31,16 +31,36 @@ class _InputFocusIssueWidgetState extends State<InputFocusIssueWidget> {
 
     _model.textController1 ??= TextEditingController();
     _model.textFieldFocusNode1 ??= FocusNode();
-
+    _model.textFieldFocusNode1!.addListener(
+      () async {
+        _model.trigger = _model.trigger + 1;
+        safeSetState(() {});
+      },
+    );
     _model.textController2 ??= TextEditingController();
     _model.textFieldFocusNode2 ??= FocusNode();
-
+    _model.textFieldFocusNode2!.addListener(
+      () async {
+        _model.trigger = _model.trigger + 1;
+        safeSetState(() {});
+      },
+    );
     _model.textController3 ??= TextEditingController();
     _model.textFieldFocusNode3 ??= FocusNode();
-
+    _model.textFieldFocusNode3!.addListener(
+      () async {
+        _model.trigger = _model.trigger + 1;
+        safeSetState(() {});
+      },
+    );
     _model.textController4 ??= TextEditingController();
     _model.textFieldFocusNode4 ??= FocusNode();
-
+    _model.textFieldFocusNode4!.addListener(
+      () async {
+        _model.trigger = _model.trigger + 1;
+        safeSetState(() {});
+      },
+    );
     WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
@@ -119,9 +139,12 @@ class _InputFocusIssueWidgetState extends State<InputFocusIssueWidget> {
                               alignment: AlignmentDirectional(0.0, 0.0),
                               child: Text(
                                 'Input Focus Issue',
-                                style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                style: FlutterFlowTheme.of(context)
+                                    .bodyMedium
+                                    .override(
                                       fontFamily: 'Open Sans',
-                                      color: FlutterFlowTheme.of(context).secondaryBackground,
+                                      color: FlutterFlowTheme.of(context)
+                                          .secondaryBackground,
                                       fontSize: 24.0,
                                       letterSpacing: 0.0,
                                     ),
@@ -132,9 +155,12 @@ class _InputFocusIssueWidgetState extends State<InputFocusIssueWidget> {
                               child: Text(
                                 'Description',
                                 textAlign: TextAlign.center,
-                                style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                style: FlutterFlowTheme.of(context)
+                                    .bodyMedium
+                                    .override(
                                       fontFamily: 'Open Sans',
-                                      color: FlutterFlowTheme.of(context).secondaryText,
+                                      color: FlutterFlowTheme.of(context)
+                                          .secondaryText,
                                       fontSize: 14.0,
                                       letterSpacing: 0.0,
                                       fontWeight: FontWeight.w500,
@@ -144,9 +170,12 @@ class _InputFocusIssueWidgetState extends State<InputFocusIssueWidget> {
                             Text(
                               'Here we are wrapping a TextField inside a Container to obtain a desired height. We have used \'Widget Focus State\' property to set the border color of the container when input is in focus.',
                               textAlign: TextAlign.justify,
-                              style: FlutterFlowTheme.of(context).bodyMedium.override(
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyMedium
+                                  .override(
                                     fontFamily: 'Inter',
-                                    color: FlutterFlowTheme.of(context).secondaryBackground,
+                                    color: FlutterFlowTheme.of(context)
+                                        .secondaryBackground,
                                     letterSpacing: 0.0,
                                   ),
                             ),
@@ -155,9 +184,12 @@ class _InputFocusIssueWidgetState extends State<InputFocusIssueWidget> {
                               child: Text(
                                 'Issue',
                                 textAlign: TextAlign.center,
-                                style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                style: FlutterFlowTheme.of(context)
+                                    .bodyMedium
+                                    .override(
                                       fontFamily: 'Open Sans',
-                                      color: FlutterFlowTheme.of(context).secondaryText,
+                                      color: FlutterFlowTheme.of(context)
+                                          .secondaryText,
                                       fontSize: 14.0,
                                       letterSpacing: 0.0,
                                       fontWeight: FontWeight.w500,
@@ -167,9 +199,12 @@ class _InputFocusIssueWidgetState extends State<InputFocusIssueWidget> {
                             Text(
                               'Border color is not changing for the input when we focus from one input to other. But, when we focus out to outside, the border color changes.',
                               textAlign: TextAlign.justify,
-                              style: FlutterFlowTheme.of(context).bodyMedium.override(
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyMedium
+                                  .override(
                                     fontFamily: 'Inter',
-                                    color: FlutterFlowTheme.of(context).secondaryBackground,
+                                    color: FlutterFlowTheme.of(context)
+                                        .secondaryBackground,
                                     letterSpacing: 0.0,
                                   ),
                             ),
@@ -178,9 +213,12 @@ class _InputFocusIssueWidgetState extends State<InputFocusIssueWidget> {
                               child: Text(
                                 'Expected',
                                 textAlign: TextAlign.center,
-                                style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                style: FlutterFlowTheme.of(context)
+                                    .bodyMedium
+                                    .override(
                                       fontFamily: 'Open Sans',
-                                      color: FlutterFlowTheme.of(context).secondaryText,
+                                      color: FlutterFlowTheme.of(context)
+                                          .secondaryText,
                                       fontSize: 14.0,
                                       letterSpacing: 0.0,
                                       fontWeight: FontWeight.w500,
@@ -190,9 +228,12 @@ class _InputFocusIssueWidgetState extends State<InputFocusIssueWidget> {
                             Text(
                               'Border color should change for the inputs when the focus changes.',
                               textAlign: TextAlign.justify,
-                              style: FlutterFlowTheme.of(context).bodyMedium.override(
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyMedium
+                                  .override(
                                     fontFamily: 'Inter',
-                                    color: FlutterFlowTheme.of(context).secondaryBackground,
+                                    color: FlutterFlowTheme.of(context)
+                                        .secondaryBackground,
                                     letterSpacing: 0.0,
                                   ),
                             ),
@@ -212,9 +253,12 @@ class _InputFocusIssueWidgetState extends State<InputFocusIssueWidget> {
                               height: 50.0,
                               decoration: BoxDecoration(
                                 border: Border.all(
-                                  color: (_model.textFieldFocusNode1?.hasFocus ?? false)
-                                      ? FlutterFlowTheme.of(context).accent1
-                                      : FlutterFlowTheme.of(context).primaryBackground,
+                                  color:
+                                      (_model.textFieldFocusNode1?.hasFocus ??
+                                              false)
+                                          ? FlutterFlowTheme.of(context).accent1
+                                          : FlutterFlowTheme.of(context)
+                                              .primaryBackground,
                                 ),
                               ),
                               child: Container(
@@ -227,15 +271,21 @@ class _InputFocusIssueWidgetState extends State<InputFocusIssueWidget> {
                                   decoration: InputDecoration(
                                     isDense: true,
                                     labelText: 'First Name',
-                                    labelStyle: FlutterFlowTheme.of(context).labelMedium.override(
+                                    labelStyle: FlutterFlowTheme.of(context)
+                                        .labelMedium
+                                        .override(
                                           fontFamily: 'Inter',
-                                          color: FlutterFlowTheme.of(context).secondaryBackground,
+                                          color: FlutterFlowTheme.of(context)
+                                              .secondaryBackground,
                                           letterSpacing: 0.0,
                                         ),
                                     hintText: 'Enter first Name',
-                                    hintStyle: FlutterFlowTheme.of(context).labelMedium.override(
+                                    hintStyle: FlutterFlowTheme.of(context)
+                                        .labelMedium
+                                        .override(
                                           fontFamily: 'Inter',
-                                          color: FlutterFlowTheme.of(context).secondaryBackground,
+                                          color: FlutterFlowTheme.of(context)
+                                              .secondaryBackground,
                                           letterSpacing: 0.0,
                                         ),
                                     enabledBorder: OutlineInputBorder(
@@ -254,26 +304,33 @@ class _InputFocusIssueWidgetState extends State<InputFocusIssueWidget> {
                                     ),
                                     errorBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
-                                        color: FlutterFlowTheme.of(context).error,
+                                        color:
+                                            FlutterFlowTheme.of(context).error,
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(10.0),
                                     ),
                                     focusedErrorBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
-                                        color: FlutterFlowTheme.of(context).error,
+                                        color:
+                                            FlutterFlowTheme.of(context).error,
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(10.0),
                                     ),
                                   ),
-                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodyMedium
+                                      .override(
                                         fontFamily: 'Inter',
-                                        color: FlutterFlowTheme.of(context).secondaryBackground,
+                                        color: FlutterFlowTheme.of(context)
+                                            .secondaryBackground,
                                         letterSpacing: 0.0,
                                       ),
-                                  cursorColor: FlutterFlowTheme.of(context).primaryText,
-                                  validator: _model.textController1Validator.asValidator(context),
+                                  cursorColor:
+                                      FlutterFlowTheme.of(context).primaryText,
+                                  validator: _model.textController1Validator
+                                      .asValidator(context),
                                 ),
                               ),
                             ),
@@ -282,9 +339,12 @@ class _InputFocusIssueWidgetState extends State<InputFocusIssueWidget> {
                               height: 50.0,
                               decoration: BoxDecoration(
                                 border: Border.all(
-                                  color: (_model.textFieldFocusNode2?.hasFocus ?? false)
-                                      ? FlutterFlowTheme.of(context).accent1
-                                      : FlutterFlowTheme.of(context).secondaryBackground,
+                                  color:
+                                      (_model.textFieldFocusNode2?.hasFocus ??
+                                              false)
+                                          ? FlutterFlowTheme.of(context).accent1
+                                          : FlutterFlowTheme.of(context)
+                                              .secondaryBackground,
                                 ),
                               ),
                               child: Container(
@@ -297,15 +357,21 @@ class _InputFocusIssueWidgetState extends State<InputFocusIssueWidget> {
                                   decoration: InputDecoration(
                                     isDense: true,
                                     labelText: 'Last Name',
-                                    labelStyle: FlutterFlowTheme.of(context).labelMedium.override(
+                                    labelStyle: FlutterFlowTheme.of(context)
+                                        .labelMedium
+                                        .override(
                                           fontFamily: 'Inter',
-                                          color: FlutterFlowTheme.of(context).secondaryBackground,
+                                          color: FlutterFlowTheme.of(context)
+                                              .secondaryBackground,
                                           letterSpacing: 0.0,
                                         ),
                                     hintText: 'Enter last Name',
-                                    hintStyle: FlutterFlowTheme.of(context).labelMedium.override(
+                                    hintStyle: FlutterFlowTheme.of(context)
+                                        .labelMedium
+                                        .override(
                                           fontFamily: 'Inter',
-                                          color: FlutterFlowTheme.of(context).secondaryBackground,
+                                          color: FlutterFlowTheme.of(context)
+                                              .secondaryBackground,
                                           letterSpacing: 0.0,
                                         ),
                                     enabledBorder: OutlineInputBorder(
@@ -324,26 +390,33 @@ class _InputFocusIssueWidgetState extends State<InputFocusIssueWidget> {
                                     ),
                                     errorBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
-                                        color: FlutterFlowTheme.of(context).error,
+                                        color:
+                                            FlutterFlowTheme.of(context).error,
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(10.0),
                                     ),
                                     focusedErrorBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
-                                        color: FlutterFlowTheme.of(context).error,
+                                        color:
+                                            FlutterFlowTheme.of(context).error,
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(10.0),
                                     ),
                                   ),
-                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodyMedium
+                                      .override(
                                         fontFamily: 'Inter',
-                                        color: FlutterFlowTheme.of(context).secondaryBackground,
+                                        color: FlutterFlowTheme.of(context)
+                                            .secondaryBackground,
                                         letterSpacing: 0.0,
                                       ),
-                                  cursorColor: FlutterFlowTheme.of(context).primaryText,
-                                  validator: _model.textController2Validator.asValidator(context),
+                                  cursorColor:
+                                      FlutterFlowTheme.of(context).primaryText,
+                                  validator: _model.textController2Validator
+                                      .asValidator(context),
                                 ),
                               ),
                             ),
@@ -352,9 +425,12 @@ class _InputFocusIssueWidgetState extends State<InputFocusIssueWidget> {
                               height: 50.0,
                               decoration: BoxDecoration(
                                 border: Border.all(
-                                  color: (_model.textFieldFocusNode3?.hasFocus ?? false)
-                                      ? FlutterFlowTheme.of(context).accent1
-                                      : FlutterFlowTheme.of(context).secondaryBackground,
+                                  color:
+                                      (_model.textFieldFocusNode3?.hasFocus ??
+                                              false)
+                                          ? FlutterFlowTheme.of(context).accent1
+                                          : FlutterFlowTheme.of(context)
+                                              .secondaryBackground,
                                 ),
                               ),
                               child: Container(
@@ -367,15 +443,21 @@ class _InputFocusIssueWidgetState extends State<InputFocusIssueWidget> {
                                   decoration: InputDecoration(
                                     isDense: true,
                                     labelText: 'City',
-                                    labelStyle: FlutterFlowTheme.of(context).labelMedium.override(
+                                    labelStyle: FlutterFlowTheme.of(context)
+                                        .labelMedium
+                                        .override(
                                           fontFamily: 'Inter',
-                                          color: FlutterFlowTheme.of(context).secondaryBackground,
+                                          color: FlutterFlowTheme.of(context)
+                                              .secondaryBackground,
                                           letterSpacing: 0.0,
                                         ),
                                     hintText: 'Enter city',
-                                    hintStyle: FlutterFlowTheme.of(context).labelMedium.override(
+                                    hintStyle: FlutterFlowTheme.of(context)
+                                        .labelMedium
+                                        .override(
                                           fontFamily: 'Inter',
-                                          color: FlutterFlowTheme.of(context).secondaryBackground,
+                                          color: FlutterFlowTheme.of(context)
+                                              .secondaryBackground,
                                           letterSpacing: 0.0,
                                         ),
                                     enabledBorder: OutlineInputBorder(
@@ -394,26 +476,33 @@ class _InputFocusIssueWidgetState extends State<InputFocusIssueWidget> {
                                     ),
                                     errorBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
-                                        color: FlutterFlowTheme.of(context).error,
+                                        color:
+                                            FlutterFlowTheme.of(context).error,
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(10.0),
                                     ),
                                     focusedErrorBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
-                                        color: FlutterFlowTheme.of(context).error,
+                                        color:
+                                            FlutterFlowTheme.of(context).error,
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(10.0),
                                     ),
                                   ),
-                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodyMedium
+                                      .override(
                                         fontFamily: 'Inter',
-                                        color: FlutterFlowTheme.of(context).secondaryBackground,
+                                        color: FlutterFlowTheme.of(context)
+                                            .secondaryBackground,
                                         letterSpacing: 0.0,
                                       ),
-                                  cursorColor: FlutterFlowTheme.of(context).primaryText,
-                                  validator: _model.textController3Validator.asValidator(context),
+                                  cursorColor:
+                                      FlutterFlowTheme.of(context).primaryText,
+                                  validator: _model.textController3Validator
+                                      .asValidator(context),
                                 ),
                               ),
                             ),
@@ -422,9 +511,12 @@ class _InputFocusIssueWidgetState extends State<InputFocusIssueWidget> {
                               height: 50.0,
                               decoration: BoxDecoration(
                                 border: Border.all(
-                                  color: (_model.textFieldFocusNode4?.hasFocus ?? false)
-                                      ? FlutterFlowTheme.of(context).accent1
-                                      : FlutterFlowTheme.of(context).secondaryBackground,
+                                  color:
+                                      (_model.textFieldFocusNode4?.hasFocus ??
+                                              false)
+                                          ? FlutterFlowTheme.of(context).accent1
+                                          : FlutterFlowTheme.of(context)
+                                              .secondaryBackground,
                                 ),
                               ),
                               child: Container(
@@ -437,15 +529,21 @@ class _InputFocusIssueWidgetState extends State<InputFocusIssueWidget> {
                                   decoration: InputDecoration(
                                     isDense: true,
                                     labelText: 'Mobile Number',
-                                    labelStyle: FlutterFlowTheme.of(context).labelMedium.override(
+                                    labelStyle: FlutterFlowTheme.of(context)
+                                        .labelMedium
+                                        .override(
                                           fontFamily: 'Inter',
-                                          color: FlutterFlowTheme.of(context).secondaryBackground,
+                                          color: FlutterFlowTheme.of(context)
+                                              .secondaryBackground,
                                           letterSpacing: 0.0,
                                         ),
                                     hintText: 'Enter Mobile Number',
-                                    hintStyle: FlutterFlowTheme.of(context).labelMedium.override(
+                                    hintStyle: FlutterFlowTheme.of(context)
+                                        .labelMedium
+                                        .override(
                                           fontFamily: 'Inter',
-                                          color: FlutterFlowTheme.of(context).secondaryBackground,
+                                          color: FlutterFlowTheme.of(context)
+                                              .secondaryBackground,
                                           letterSpacing: 0.0,
                                         ),
                                     enabledBorder: OutlineInputBorder(
@@ -464,26 +562,33 @@ class _InputFocusIssueWidgetState extends State<InputFocusIssueWidget> {
                                     ),
                                     errorBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
-                                        color: FlutterFlowTheme.of(context).error,
+                                        color:
+                                            FlutterFlowTheme.of(context).error,
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(10.0),
                                     ),
                                     focusedErrorBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
-                                        color: FlutterFlowTheme.of(context).error,
+                                        color:
+                                            FlutterFlowTheme.of(context).error,
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(10.0),
                                     ),
                                   ),
-                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodyMedium
+                                      .override(
                                         fontFamily: 'Inter',
-                                        color: FlutterFlowTheme.of(context).secondaryBackground,
+                                        color: FlutterFlowTheme.of(context)
+                                            .secondaryBackground,
                                         letterSpacing: 0.0,
                                       ),
-                                  cursorColor: FlutterFlowTheme.of(context).primaryText,
-                                  validator: _model.textController4Validator.asValidator(context),
+                                  cursorColor:
+                                      FlutterFlowTheme.of(context).primaryText,
+                                  validator: _model.textController4Validator
+                                      .asValidator(context),
                                 ),
                               ),
                             ),
