@@ -112,12 +112,9 @@ class _InputLabelIssueWidgetState extends State<InputLabelIssueWidget> {
                               alignment: AlignmentDirectional(0.0, 0.0),
                               child: Text(
                                 'Input Label Issue',
-                                style: FlutterFlowTheme.of(context)
-                                    .bodyMedium
-                                    .override(
+                                style: FlutterFlowTheme.of(context).bodyMedium.override(
                                       fontFamily: 'Open Sans',
-                                      color: FlutterFlowTheme.of(context)
-                                          .secondaryBackground,
+                                      color: FlutterFlowTheme.of(context).secondaryBackground,
                                       fontSize: 24.0,
                                       letterSpacing: 0.0,
                                     ),
@@ -128,12 +125,9 @@ class _InputLabelIssueWidgetState extends State<InputLabelIssueWidget> {
                               child: Text(
                                 'Description',
                                 textAlign: TextAlign.center,
-                                style: FlutterFlowTheme.of(context)
-                                    .bodyMedium
-                                    .override(
+                                style: FlutterFlowTheme.of(context).bodyMedium.override(
                                       fontFamily: 'Open Sans',
-                                      color: FlutterFlowTheme.of(context)
-                                          .secondaryText,
+                                      color: FlutterFlowTheme.of(context).secondaryText,
                                       fontSize: 14.0,
                                       letterSpacing: 0.0,
                                       fontWeight: FontWeight.w500,
@@ -143,12 +137,9 @@ class _InputLabelIssueWidgetState extends State<InputLabelIssueWidget> {
                             Text(
                               'We have disabled the input here. The Input is wrapped inside a container. The Input is empty and there is only hint text.',
                               textAlign: TextAlign.justify,
-                              style: FlutterFlowTheme.of(context)
-                                  .bodyMedium
-                                  .override(
+                              style: FlutterFlowTheme.of(context).bodyMedium.override(
                                     fontFamily: 'Inter',
-                                    color: FlutterFlowTheme.of(context)
-                                        .secondaryBackground,
+                                    color: FlutterFlowTheme.of(context).secondaryBackground,
                                     letterSpacing: 0.0,
                                   ),
                             ),
@@ -157,12 +148,9 @@ class _InputLabelIssueWidgetState extends State<InputLabelIssueWidget> {
                               child: Text(
                                 'Issue',
                                 textAlign: TextAlign.center,
-                                style: FlutterFlowTheme.of(context)
-                                    .bodyMedium
-                                    .override(
+                                style: FlutterFlowTheme.of(context).bodyMedium.override(
                                       fontFamily: 'Open Sans',
-                                      color: FlutterFlowTheme.of(context)
-                                          .secondaryText,
+                                      color: FlutterFlowTheme.of(context).secondaryText,
                                       fontSize: 14.0,
                                       letterSpacing: 0.0,
                                       fontWeight: FontWeight.w500,
@@ -172,12 +160,9 @@ class _InputLabelIssueWidgetState extends State<InputLabelIssueWidget> {
                             Text(
                               'Even if the input is disabled, the Label is animating.',
                               textAlign: TextAlign.justify,
-                              style: FlutterFlowTheme.of(context)
-                                  .bodyMedium
-                                  .override(
+                              style: FlutterFlowTheme.of(context).bodyMedium.override(
                                     fontFamily: 'Inter',
-                                    color: FlutterFlowTheme.of(context)
-                                        .secondaryBackground,
+                                    color: FlutterFlowTheme.of(context).secondaryBackground,
                                     letterSpacing: 0.0,
                                   ),
                             ),
@@ -186,12 +171,9 @@ class _InputLabelIssueWidgetState extends State<InputLabelIssueWidget> {
                               child: Text(
                                 'Expected',
                                 textAlign: TextAlign.center,
-                                style: FlutterFlowTheme.of(context)
-                                    .bodyMedium
-                                    .override(
+                                style: FlutterFlowTheme.of(context).bodyMedium.override(
                                       fontFamily: 'Open Sans',
-                                      color: FlutterFlowTheme.of(context)
-                                          .secondaryText,
+                                      color: FlutterFlowTheme.of(context).secondaryText,
                                       fontSize: 14.0,
                                       letterSpacing: 0.0,
                                       fontWeight: FontWeight.w500,
@@ -201,12 +183,9 @@ class _InputLabelIssueWidgetState extends State<InputLabelIssueWidget> {
                             Text(
                               'Label should not animate when the input is disabled.',
                               textAlign: TextAlign.justify,
-                              style: FlutterFlowTheme.of(context)
-                                  .bodyMedium
-                                  .override(
+                              style: FlutterFlowTheme.of(context).bodyMedium.override(
                                     fontFamily: 'Inter',
-                                    color: FlutterFlowTheme.of(context)
-                                        .secondaryBackground,
+                                    color: FlutterFlowTheme.of(context).secondaryBackground,
                                     letterSpacing: 0.0,
                                   ),
                             ),
@@ -228,11 +207,9 @@ class _InputLabelIssueWidgetState extends State<InputLabelIssueWidget> {
                               height: 50.0,
                               decoration: BoxDecoration(
                                 border: Border.all(
-                                  color: (_model.textFieldFocusNode?.hasFocus ??
-                                          false)
+                                  color: (_model.textFieldFocusNode?.hasFocus ?? false)
                                       ? FlutterFlowTheme.of(context).accent1
-                                      : FlutterFlowTheme.of(context)
-                                          .secondaryBackground,
+                                      : FlutterFlowTheme.of(context).secondaryBackground,
                                 ),
                               ),
                               child: Container(
@@ -242,25 +219,20 @@ class _InputLabelIssueWidgetState extends State<InputLabelIssueWidget> {
                                   focusNode: _model.textFieldFocusNode,
                                   autofocus: false,
                                   readOnly: true,
+                                  enabled: false,
                                   obscureText: false,
                                   decoration: InputDecoration(
                                     isDense: true,
                                     labelText: 'First Name',
-                                    labelStyle: FlutterFlowTheme.of(context)
-                                        .labelMedium
-                                        .override(
+                                    labelStyle: FlutterFlowTheme.of(context).labelMedium.override(
                                           fontFamily: 'Inter',
-                                          color: FlutterFlowTheme.of(context)
-                                              .secondaryBackground,
+                                          color: FlutterFlowTheme.of(context).secondaryBackground,
                                           letterSpacing: 0.0,
                                         ),
                                     hintText: 'Enter first Name',
-                                    hintStyle: FlutterFlowTheme.of(context)
-                                        .labelMedium
-                                        .override(
+                                    hintStyle: FlutterFlowTheme.of(context).labelMedium.override(
                                           fontFamily: 'Inter',
-                                          color: FlutterFlowTheme.of(context)
-                                              .secondaryBackground,
+                                          color: FlutterFlowTheme.of(context).secondaryBackground,
                                           letterSpacing: 0.0,
                                         ),
                                     enabledBorder: OutlineInputBorder(
@@ -279,33 +251,26 @@ class _InputLabelIssueWidgetState extends State<InputLabelIssueWidget> {
                                     ),
                                     errorBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
-                                        color:
-                                            FlutterFlowTheme.of(context).error,
+                                        color: FlutterFlowTheme.of(context).error,
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(10.0),
                                     ),
                                     focusedErrorBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
-                                        color:
-                                            FlutterFlowTheme.of(context).error,
+                                        color: FlutterFlowTheme.of(context).error,
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(10.0),
                                     ),
                                   ),
-                                  style: FlutterFlowTheme.of(context)
-                                      .bodyMedium
-                                      .override(
+                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
                                         fontFamily: 'Inter',
-                                        color: FlutterFlowTheme.of(context)
-                                            .secondaryBackground,
+                                        color: FlutterFlowTheme.of(context).secondaryBackground,
                                         letterSpacing: 0.0,
                                       ),
-                                  cursorColor:
-                                      FlutterFlowTheme.of(context).primaryText,
-                                  validator: _model.textControllerValidator
-                                      .asValidator(context),
+                                  cursorColor: FlutterFlowTheme.of(context).primaryText,
+                                  validator: _model.textControllerValidator.asValidator(context),
                                 ),
                               ),
                             ),
